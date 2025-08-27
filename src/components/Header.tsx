@@ -1,4 +1,5 @@
 import { Search, Menu, User } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -25,21 +26,21 @@ export function Header() {
 
           {/* Navigation - Hidden on mobile */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
               Início
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/ia-generativa" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               IA Generativa
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/tutoriais" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Tutoriais
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/palestras" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Palestras
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/neuroeducacao" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Neuroeducação
-            </a>
+            </Link>
           </nav>
 
           {/* Search and Profile */}
