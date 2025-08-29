@@ -11,6 +11,8 @@ interface VideoCardProps {
   category?: string;
   className?: string;
   size?: "default" | "large" | "small";
+  href?: string;
+  onClick?: () => void;
 }
 
 export function VideoCard({
@@ -21,7 +23,9 @@ export function VideoCard({
   views,
   category,
   className,
-  size = "default"
+  size = "default",
+  href,
+  onClick
 }: VideoCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -31,10 +35,18 @@ export function VideoCard({
     large: "w-96 h-56"
   };
 
+  const CardWrapper = href ? "a" : "div";
+  const cardProps = href 
+    ? { href, target: "_blank", rel: "noopener noreferrer" }
+    : onClick 
+    ? { onClick }
+    : {};
+
   return (
-    <div
+    <CardWrapper
+      {...cardProps}
       className={cn(
-        "group relative overflow-hidden rounded-lg bg-gradient-card backdrop-blur-sm border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-glow cursor-pointer",
+        "group relative overflow-hidden rounded-lg bg-gradient-card backdrop-blur-sm border border-border/50 transition-all duration-300 hover:scale-105 hover:shadow-glow cursor-pointer block",
         sizeClasses[size],
         className
       )}
@@ -96,6 +108,6 @@ export function VideoCard({
           </div>
         )}
       </div>
-    </div>
+    </CardWrapper>
   );
 }

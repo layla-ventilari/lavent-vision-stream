@@ -196,6 +196,10 @@ export const getFeaturedVideos = (): Video[] => {
   return videos.filter(video => video.featured);
 };
 
+export const getAllVideos = (): Video[] => {
+  return videos;
+};
+
 export const searchVideos = (query: string): Video[] => {
   const searchTerm = query.toLowerCase();
   return videos.filter(video => 

@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Health from "./pages/Health";
 import Watch from "./pages/Watch";
 import Category from "./pages/Category";
+import Search from "./pages/Search";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/health" element={<Health />} />
             <Route path="/watch/:id" element={<Watch />} />
+            <Route path="/search" element={<Search />} />
             <Route path="/ia-generativa" element={<Category />} />
             <Route path="/tutoriais" element={<Category />} />
             <Route path="/palestras" element={<Category />} />
