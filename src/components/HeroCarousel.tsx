@@ -2,41 +2,10 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import heroAiImage from "@/assets/hero-ai.jpg";
+import { getFeaturedVideos } from "@/data/videos";
+import { Link } from "react-router-dom";
 
-interface HeroVideo {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string;
-  category: string;
-  featured?: boolean;
-}
-
-const heroVideos: HeroVideo[] = [
-  {
-    id: "1",
-    title: "O Futuro da IA Generativa: Transformando a Criatividade",
-    description: "Explore como a inteligência artificial está revolucionando o processo criativo em diversas indústrias, desde arte digital até produção musical.",
-    thumbnail: heroAiImage,
-    category: "IA Generativa",
-    featured: true
-  },
-  {
-    id: "2", 
-    title: "Neuroeducação: Como o Cérebro Aprende na Era Digital",
-    description: "Descubra os princípios científicos por trás da aprendizagem eficaz e como aplicar neurociência na educação moderna.",
-    thumbnail: heroAiImage,
-    category: "Neuroeducação"
-  },
-  {
-    id: "3",
-    title: "Tutorial: Criando seu Primeiro Modelo de Machine Learning",
-    description: "Passo a passo completo para desenvolver e treinar seu primeiro modelo de ML, desde a coleta de dados até a implementação.",
-    thumbnail: heroAiImage, 
-    category: "Tutoriais"
-  }
-];
+const heroVideos = getFeaturedVideos();
 
 export function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -93,7 +62,7 @@ export function HeroCarousel() {
           <div className="max-w-2xl">
             {/* Category Badge */}
             <div className="inline-flex items-center bg-gradient-primary px-4 py-2 rounded-full text-sm font-medium text-white mb-4 shadow-glow">
-              {currentVideo.category}
+              {currentVideo.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
             </div>
 
             {/* Title */}
@@ -108,14 +77,18 @@ export function HeroCarousel() {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-200 transition-colors group">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Assistir Agora
+              <Button asChild size="lg" className="bg-white text-black hover:bg-gray-200 transition-colors group">
+                <Link to={`/watch/${currentVideo.id}`}>
+                  <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                  Assistir Agora
+                </Link>
               </Button>
               
-              <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
-                <Info className="w-5 h-5 mr-2" />
-                Mais Informações
+              <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
+                <Link to={`/${currentVideo.category}`}>
+                  <Info className="w-5 h-5 mr-2" />
+                  Mais Informações
+                </Link>
               </Button>
             </div>
           </div>

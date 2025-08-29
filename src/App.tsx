@@ -7,6 +7,8 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Health from "./pages/Health";
+import Watch from "./pages/Watch";
+import Category from "./pages/Category";
 
 const queryClient = new QueryClient();
 
@@ -20,10 +22,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/health" element={<Health />} />
-            <Route path="/ia-generativa" element={<Index />} />
-            <Route path="/tutoriais" element={<Index />} />
-            <Route path="/palestras" element={<Index />} />
-            <Route path="/neuroeducacao" element={<Index />} />
+            <Route path="/watch/:id" element={<Watch />} />
+            <Route path="/ia-generativa" element={<Category />} />
+            <Route path="/tutoriais" element={<Category />} />
+            <Route path="/palestras" element={<Category />} />
+            <Route path="/neuroeducacao" element={<Category />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

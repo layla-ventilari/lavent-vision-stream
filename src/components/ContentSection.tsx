@@ -1,16 +1,9 @@
 import { ChevronRight } from "lucide-react";
 import { VideoCard } from "@/components/ui/video-card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Video } from "@/data/videos";
 
-interface Video {
-  id: string;
-  title: string;
-  description: string;
-  thumbnail: string;
-  duration: string;
-  views: string;
-  category: string;
-}
 
 interface ContentSectionProps {
   title: string;
@@ -25,6 +18,7 @@ export function ContentSection({
   videos, 
   showViewMore = true 
 }: ContentSectionProps) {
+  const categoryPath = videos[0]?.category || '';
   return (
     <section className="py-12">
       <div className="container mx-auto px-6">
@@ -42,9 +36,11 @@ export function ContentSection({
           </div>
           
           {showViewMore && (
-            <Button variant="ghost" className="hidden md:flex items-center gap-2 text-primary hover:text-primary-glow">
-              Ver Tudo
-              <ChevronRight className="w-4 h-4" />
+            <Button asChild variant="ghost" className="hidden md:flex items-center gap-2 text-primary hover:text-primary-glow">
+              <Link to={`/${categoryPath}`}>
+                Ver Tudo
+                <ChevronRight className="w-4 h-4" />
+              </Link>
             </Button>
           )}
         </div>
@@ -55,14 +51,16 @@ export function ContentSection({
           <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
             {videos.map((video) => (
               <div key={video.id} className="flex-shrink-0">
-                <VideoCard
-                  title={video.title}
-                  description={video.description}
-                  thumbnail={video.thumbnail}
-                  duration={video.duration}
-                  views={video.views}
-                  category={video.category}
-                />
+                <Link to={`/watch/${video.id}`}>
+                  <VideoCard
+                    title={video.title}
+                    description={video.description}
+                    thumbnail={video.thumbnail}
+                    duration={video.duration}
+                    views={video.views}
+                    category={video.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                  />
+                </Link>
               </div>
             ))}
           </div>
@@ -74,8 +72,10 @@ export function ContentSection({
         {/* Mobile View More Button */}
         {showViewMore && (
           <div className="md:hidden mt-6 text-center">
-            <Button variant="outline" className="w-full">
-              Ver Todos os Vídeos
+            <Button asChild variant="outline" className="w-full">
+              <Link to={`/${categoryPath}`}>
+                Ver Todos os Vídeos
+              </Link>
             </Button>
           </div>
         )}
