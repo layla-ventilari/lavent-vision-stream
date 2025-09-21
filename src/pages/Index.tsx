@@ -3,11 +3,11 @@ import { HeroCarousel } from "@/components/HeroCarousel";
 import { ContentSection } from "@/components/ContentSection";
 import { getVideosByCategory } from "@/data/videos";
 
-// Get videos by category from unified data source
-const iaGenerativaVideos = getVideosByCategory('ia-generativa');
-const tutoriaisVideos = getVideosByCategory('tutoriais');
-const palestrasVideos = getVideosByCategory('palestras');
-const neuroeducacaoVideos = getVideosByCategory('neuroeducacao');
+// Get videos by category from unified data source  
+const filmesVideos = getVideosByCategory('filmes-curtas');
+const animacaoVideos = getVideosByCategory('animacao-videoarte');
+const arteDigitalVideos = getVideosByCategory('arte-digital');
+const projetosTecnologicosVideos = getVideosByCategory('projetos-tecnologicos');
 
 const Index = () => {
   return (
@@ -20,27 +20,27 @@ const Index = () => {
 
         {/* Content Sections */}
         <ContentSection
-          title="IA Generativa"
-          description="Explore o fascinante mundo da inteligência artificial generativa e suas aplicações revolucionárias."
-          videos={iaGenerativaVideos}
+          title="Filmes e Curtas-Metragens"
+          description="Cinema experimental que mescla tecnologia e narrativa para questionar realidades e explorar futuros possíveis da Amazônia."
+          videos={filmesVideos}
         />
 
         <ContentSection
-          title="Tutoriais Práticos"
-          description="Aprenda através de projetos hands-on e desenvolva habilidades técnicas essenciais."
-          videos={tutoriaisVideos}
+          title="Animação e Video Arte"
+          description="Criações visuais que reinventam paisagens e culturas através da fusão entre tradição amazônica e estética digital contemporânea."
+          videos={animacaoVideos}
         />
 
         <ContentSection
-          title="Palestras e Conferências"
-          description="Insights de especialistas sobre o futuro da IA e seu impacto na sociedade."
-          videos={palestrasVideos}
+          title="Arte Digital e Pinturas"
+          description="Explorações artísticas que celebram a biodiversidade e diversidade cultural do Norte brasileiro através de técnicas digitais avançadas."
+          videos={arteDigitalVideos}
         />
 
         <ContentSection
-          title="Neuroeducação"
-          description="Descubra como a neurociência pode transformar métodos de ensino e aprendizagem."
-          videos={neuroeducacaoVideos}
+          title="Projetos Tecnológicos"
+          description="Inovações em realidade aumentada, Web3 e interfaces experimentais que democratizam o acesso ao patrimônio cultural amazônico."
+          videos={projetosTecnologicosVideos}
         />
       </main>
 
@@ -50,18 +50,19 @@ const Index = () => {
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-                <span className="text-white font-bold text-lg">L</span>
+                <span className="text-white font-bold text-lg">I</span>
               </div>
               <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Lavent Vision
+                Ivelton Queiroz
               </h3>
             </div>
             <p className="text-muted-foreground mb-6">
-              Plataforma de streaming educacional focada em IA e tecnologia avançada.
+              Artista digital, cineasta e desenvolvedor web de Manaus. Explorando os limites entre tecnologia e cultura amazônica.
             </p>
-            <p className="text-sm text-muted-foreground">
-              © 2024 Lavent Lab. Todos os direitos reservados.
-            </p>
+            <div className="text-sm text-muted-foreground space-y-1">
+              <p>Formado na Queensland School of Film & Television (2000–2001)</p>
+              <p>© 2024 Ivelton Queiroz. Todos os direitos reservados.</p>
+            </div>
           </div>
         </div>
       </footer>

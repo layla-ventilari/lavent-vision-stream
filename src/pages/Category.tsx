@@ -3,17 +3,17 @@ import { getVideosByCategory, Video } from "@/data/videos";
 import { VideoCard } from "@/components/ui/video-card";
 
 const categoryTitles: Record<Video['category'], string> = {
-  'ia-generativa': 'IA Generativa',
-  'tutoriais': 'Tutoriais',
-  'palestras': 'Palestras',
-  'neuroeducacao': 'Neuroeducação'
+  'filmes-curtas': 'Filmes e Curtas-Metragens',
+  'animacao-videoarte': 'Animação e Video Arte',
+  'arte-digital': 'Arte Digital e Pinturas',
+  'projetos-tecnologicos': 'Projetos Tecnológicos'
 };
 
 const categoryDescriptions: Record<Video['category'], string> = {
-  'ia-generativa': 'Explore o mundo da inteligência artificial generativa e suas aplicações práticas.',
-  'tutoriais': 'Aprenda programação e tecnologia com nossos tutoriais passo a passo.',
-  'palestras': 'Assista palestras inspiradoras sobre carreira, inovação e futuro da tecnologia.',
-  'neuroeducacao': 'Descubra como a neurociência pode otimizar seu processo de aprendizagem.'
+  'filmes-curtas': 'Cinema experimental que mescla tecnologia e narrativa para questionar realidades e explorar futuros possíveis da Amazônia.',
+  'animacao-videoarte': 'Criações visuais que reinventam paisagens e culturas através da fusão entre tradição amazônica e estética digital contemporânea.',
+  'arte-digital': 'Explorações artísticas que celebram a biodiversidade e diversidade cultural do Norte brasileiro através de técnicas digitais avançadas.',
+  'projetos-tecnologicos': 'Inovações em realidade aumentada, Web3 e interfaces experimentais que democratizam o acesso ao patrimônio cultural amazônico.'
 };
 
 const Category = () => {
