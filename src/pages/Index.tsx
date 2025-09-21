@@ -8,10 +8,8 @@ const filmesVideos = getVideosByCategory('filmes-curtas');
 const animacaoVideos = getVideosByCategory('animacao-videoarte');
 const arteDigitalVideos = getVideosByCategory('arte-digital');
 const projetosTecnologicosVideos = getVideosByCategory('projetos-tecnologicos');
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <Header />
       
       <main className="pt-20">
@@ -19,29 +17,13 @@ const Index = () => {
         <HeroCarousel />
 
         {/* Content Sections */}
-        <ContentSection
-          title="Filmes e Curtas-Metragens"
-          description="Cinema experimental que mescla tecnologia e narrativa para questionar realidades e explorar futuros possíveis da Amazônia."
-          videos={filmesVideos}
-        />
+        <ContentSection title="Filmes e Curtas-Metragens" description="Cinema experimental que mescla tecnologia e narrativa para questionar realidades e explorar futuros possíveis da Amazônia." videos={filmesVideos} />
 
-        <ContentSection
-          title="Animação e Video Arte"
-          description="Criações visuais que reinventam paisagens e culturas através da fusão entre tradição amazônica e estética digital contemporânea."
-          videos={animacaoVideos}
-        />
+        <ContentSection title="Animação e Video Arte" description="Criações visuais que reinventam paisagens e culturas através da fusão entre tradição amazônica e estética digital contemporânea." videos={animacaoVideos} />
 
-        <ContentSection
-          title="Arte Digital e Pinturas"
-          description="Explorações artísticas que celebram a biodiversidade e diversidade cultural do Norte brasileiro através de técnicas digitais avançadas."
-          videos={arteDigitalVideos}
-        />
+        <ContentSection title="Arte Digital e Pinturas" description="Explorações artísticas que celebram a biodiversidade e diversidade cultural do Norte brasileiro através de técnicas digitais avançadas." videos={arteDigitalVideos} />
 
-        <ContentSection
-          title="Projetos Tecnológicos"
-          description="Inovações em realidade aumentada, Web3 e interfaces experimentais que democratizam o acesso ao patrimônio cultural amazônico."
-          videos={projetosTecnologicosVideos}
-        />
+        <ContentSection title="Projetos Tecnológicos" description="Inovações em realidade aumentada, Web3 e interfaces experimentais que democratizam o acesso ao patrimônio cultural amazônico." videos={projetosTecnologicosVideos} />
       </main>
 
       {/* Footer */}
@@ -49,9 +31,7 @@ const Index = () => {
         <div className="container mx-auto px-6 py-12">
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center shadow-glow">
-                <span className="text-white font-bold text-lg">I</span>
-              </div>
+              
               <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Ivelton Queiroz
               </h3>
@@ -66,8 +46,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
