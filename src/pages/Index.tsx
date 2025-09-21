@@ -40,7 +40,7 @@ const Index = () => {
               Artista digital, cineasta e desenvolvedor web de Manaus. Explorando os limites entre tecnologia e cultura amazônica.
             </p>
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>Formado na Queensland School of Film & Television (2000–2001)</p>
+              
               <p>© 2024 Ivelton Queiroz. Todos os direitos reservados.</p>
             </div>
           </div>
