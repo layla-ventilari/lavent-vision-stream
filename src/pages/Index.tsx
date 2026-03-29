@@ -33,7 +33,7 @@ const Index = () => {
             <div className="flex items-center justify-center gap-2 mb-4">
               
               <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Ivelton Queiroz
+                Lavent Streaming
               </h3>
             </div>
             <p className="text-muted-foreground mb-6">
@@ -41,7 +41,7 @@ const Index = () => {
             </p>
             <div className="text-sm text-muted-foreground space-y-1">
               
-              <p>© 2024 Ivelton Queiroz. Todos os direitos reservados.</p>
+              <p>© 2024 Lavent Streaming. Todos os direitos reservados.</p>
             </div>
           </div>
         </div>
