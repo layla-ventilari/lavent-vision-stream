@@ -57,7 +57,7 @@ export function Header() {
             
             <div className="flex items-center gap-2">
               
-              <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent tracking-tight">Ivelton Queiroz</h1>
+              <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent tracking-tight">Lavent Streaming</h1>
             </div>
           </div>
 
