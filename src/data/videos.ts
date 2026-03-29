@@ -47,7 +47,7 @@ export const videos: Video[] = [
   {
     id: "3",
     title: "IVELTON'S GENERATIVE AI WORKS 2025.1",
-    description: "Portfólio completo dos trabalhos em inteligência artificial generativa de Ivelton Queiroz, artista digital e cineasta de Manaus. Explora técnicas avançadas de IA para criação de arte digital, animação e narrativas visuais que reinventam a expressão cultural amazônica.",
+    description: "Portfólio completo dos trabalhos em inteligência artificial generativa de Lavent Streaming, artista digital e cineasta de Manaus. Explora técnicas avançadas de IA para criação de arte digital, animação e narrativas visuais que reinventam a expressão cultural amazônica.",
     thumbnail: "https://img.youtube.com/vi/GNQFjIJhuMA/hqdefault.jpg",
     duration: "15:30",
     views: "2.1K",
@@ -129,7 +129,7 @@ export const videos: Video[] = [
   {
     id: "9",
     title: "Coleção Digital - Natureza Amazônica",
-    description: "Série de pinturas digitais inspiradas na flora e fauna amazônica, criadas por Ivelton Queiroz. Cada obra explora a biodiversidade única da região através de técnicas digitais avançadas, combinando realismo e expressionismo para revelar a alma da floresta tropical.",
+    description: "Série de pinturas digitais inspiradas na flora e fauna amazônica, criadas por Lavent Streaming. Cada obra explora a biodiversidade única da região através de técnicas digitais avançadas, combinando realismo e expressionismo para revelar a alma da floresta tropical.",
     thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
     duration: "12:45",
     views: "1.2K",
@@ -142,7 +142,7 @@ export const videos: Video[] = [
   {
     id: "10",
     title: "Retratos Culturais do Norte",
-    description: "Galeria de retratos digitais que celebram a diversidade étnica e cultural do Norte do Brasil. Ivelton Queiroz captura a essência dos povos ribeirinhos, indígenas e urbanos através de uma abordagem artística contemporânea que honra tradições ancestrais.",
+    description: "Galeria de retratos digitais que celebram a diversidade étnica e cultural do Norte do Brasil. Lavent Streaming captura a essência dos povos ribeirinhos, indígenas e urbanos através de uma abordagem artística contemporânea que honra tradições ancestrais.",
     thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
     duration: "18:30",
     views: "2.3K",
@@ -158,7 +158,7 @@ export const videos: Video[] = [
   {
     id: "11",
     title: "Realidade Aumentada - Museu Virtual Amazônico",
-    description: "Projeto pioneiro de realidade aumentada que traz a riqueza cultural amazônica para ambientes digitais interativos. Desenvolvido por Ivelton Queiroz, o museu virtual permite explorar artefatos indígenas, fauna e flora em 3D, democratizando o acesso ao patrimônio cultural amazônico.",
+    description: "Projeto pioneiro de realidade aumentada que traz a riqueza cultural amazônica para ambientes digitais interativos. Desenvolvido por Lavent Streaming, o museu virtual permite explorar artefatos indígenas, fauna e flora em 3D, democratizando o acesso ao patrimônio cultural amazônico.",
     thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
     duration: "24:15",
     views: "3.7K",
@@ -185,7 +185,7 @@ export const videos: Video[] = [
   {
     id: "13",
     title: "Interface Experimental - Navegação Gestual",
-    description: "Desenvolvimento de interfaces experimentais que utilizam reconhecimento gestual para navegação intuitiva. Este projeto demonstra a pesquisa de Ivelton Queiroz em interação humano-computador, criando experiências digitais mais naturais e acessíveis.",
+    description: "Desenvolvimento de interfaces experimentais que utilizam reconhecimento gestual para navegação intuitiva. Este projeto demonstra a pesquisa de Lavent Streaming em interação humano-computador, criando experiências digitais mais naturais e acessíveis.",
     thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
     duration: "16:20",
     views: "1.1K",
